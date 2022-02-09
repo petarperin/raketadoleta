@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>miabella/dodajrecept</title>
+    <link rel = "icon" href = 
+        "slike/logo.PNG" 
+        type = "image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="skripta.js"></script>
+</head>
+<body onload="inicdod()">
+    <div class="container-fluid heder"> 
+        <div class="row" style="background-image: url(slike/crpoz.jpg);height: 600px; background-size: cover; background-repeat: no-repeat;
+        background-attachment: fixed;" >
+            
+            <div class="col" style="padding-top: 20px;">
+                
+                
+                <nav class="navbar navbar-expand navbar-light fixed-top bg-light" style="height: 150px;  ">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"  >
+                            <img src="slike/logo.PNG" alt="Logo" style="width:150px; margin-top: -45px;">
+                            </a>
+                        <div class="d-flex flex-column flex-wrap" id="navbarCollapse">
+                            
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <a class="nav-link py-0" id="navpoc" href="index.html"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0" id="navpro" href="mojprofil.html">Moj profil</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link py-0" id="navre" href="recepti.html">Recepti</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link py-0" id="navdod" href="dodajrecept.html">Dodaj recept</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0" id="navo" href="onama.html">O nama</a>
+                                </li>
+                            </ul>
+                            &nbsp;
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <input type='radio' checked value='srp' name='radio' id='radio1'/>
+                                    <label class=" py-0" for='radio1'  value='srp' style="color: grey;">srp</label>
+                                </li>
+                                <li class="nav-item">
+                                    <input type='radio' value='eng' name='radio' id='radio2'/>
+                                    <label class=" py-0" for='radio1'  value='eng'  style="color: grey;">eng</label>
+                                </li>
+                            </ul>
+                             
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    </div>
+                </nav>
+
+
+
+                   <div style="text-align: center; padding-top: 20px; color: #d54d7b; font-family: Great Vibes; font-size: 100px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; " id="dodre">Dodaj recept</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        
+        <div class="row bio" style="padding-top: 20px;background-image: url(slike/prljavobelapozadina.jpg); background-size: cover; background-repeat: no-repeat;
+        background-attachment: fixed;height: 600px;">
+        <div class="col-12" style="height: 50px;">&nbsp;</div>
+            <div class="col-md-3 col-sm-2" style="text-align: center; "></div>
+            <div class="col-md-6 col-sm-12" style="text-align: center; ">
+                 <form action="" id="myForm">
+                    <input id='imerec' placeholder="ime recepta" type='text' style="border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                    height: 38px;
+                    line-height: 38px;
+                    padding-left: 5px;" required>
+                    <br><br>
+                    <div class='pets-gender'>
+                        <label for='pet-gender-female' id="vrstt">Vrsta</label>
+                        <div class='radio-container'>
+                          <input checked='' id='glavno' name='pet-gender' type='radio' value='glavno'>
+                          <label for='glavno' id="glavv">Glavno</label>
+                          <input id='dezert' name='pet-gender' type='radio' value='dezert'>
+                          <label for='dezert' id="dezz">Dezert</label>
+                          <input id='predjelo' name='pet-gender' type='radio' value='predjelo'>
+                          <label for='predjelo' id="predd">Predjelo</label>
+                          <input id='uzina' name='pet-gender' type='radio' value='uzina'>
+                          <label for='uzina' id="uzz">Uzina</label>
+                        </div>
+                      </div>
+                    <br>
+                    <input id='poljerecepta' placeholder="recept" type='text' style="border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                    height: 38px;
+                    line-height: 38px;
+                    padding-left: 5px;" required>
+                    <br><br>
+                    <div class='pets-genderrr'>
+                        <label for='' id="tezz">Tezina</label>
+                        <div class='radio-container'>
+                          <input checked='' id='kec' name='tezina' type='radio' value='1'>
+                          <label for='kec'>1</label>
+                          <input id='dva' name='tezina' type='radio' value='2'>
+                          <label for='dva'>2</label>
+                          <input id='tri' name='tezina' type='radio' value='3'>
+                          <label for='tri'>3</label>
+                          <input id='cet' name='tezina' type='radio' value='4'>
+                          <label for='cet'>4</label>
+                          <input id='pet' name='tezina' type='radio' value='5'>
+                          <label for='pet'>5</label>
+                        </div>
+                      </div>
+                      <br>
+                    <div class='pets-genderr'>
+                        <label for='' id="trajj">Trajanje</label>
+                        <div class='radio-container'>
+                          <input checked='' id='aa' name='traj' type='radio' value='0-30min'>
+                          <label for='aa'>0-30min</label>
+                          <input id='bb' name='traj' type='radio' value='30min-1h'>
+                          <label for='bb'>30min-1h</label>
+                          <input id='cc' name='traj' type='radio' value='>1h'>
+                          <label for='cc'>>1h</label> 
+                        </div>
+                      </div>
+                      <br>
+                      <br><br>
+                      <button style="width:190px; height:30px;" onclick="document.getElementById('slika').click()" id="izabsll" >Izaberite sliku jela</button>
+                      <input type="file"  accept="image/*" name="slika" id="slika" style="display: none;" onchange="loadPicture(event)" required>	
+
+                      <button style="width:190px; height:30px;" onclick="document.getElementById('video').click()" id="izabvidd">Izaberite snimak jela</button>
+                      <input type="file"  accept="video/*" name="video" id="video" style="display: none;" onchange="loadVideo(event)" required>
+
+                      <a href="dodajrecept.html">
+                          <br><br><br><br>
+                        <button style="color: black;" id="dugmedodajrecept">Dodaj</button>
+                    </a>
+                 </form>
+            </div>
+        </div>
+         
+    </div>
+    <div class="container-fluid futer">
+        
+        <div class="row" style=" background-color: darksalmon;">
+            <div class="col-12 " style="text-align: center;">
+                <span><i  id="fut">Copyright 2021, Sara Kolarevic i Aleksa Janjic, Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu</i> </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

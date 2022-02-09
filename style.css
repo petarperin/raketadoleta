@@ -1,0 +1,303 @@
+div.header{
+    background: linear-gradient(to bottom, #ffeedf , white);
+    /*background-color: #ffeedf; /*FFE5CC*/
+    
+    margin-bottom: -16px;
+}
+div.header button{ 
+    
+width: 65px;
+height: 38px;
+outline: none;
+background: #FFCCCC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 1000px;
+border: none;
+}
+.navbar a{
+    color: #ff007f;
+}
+.navbar a:hover{
+    color: #660033;
+}
+div.loggingLinks{
+    padding-top: 20px;
+    padding-right: 20px;
+    float:right;
+}
+.naslov{
+    text-align: center;
+    font-size: 15vh;
+    color: #99004C;
+}
+
+.ispodnaslova{
+    text-align: center;
+    font-size: 7vh;
+    color: #99004C;
+}
+.naslov2{
+    text-align: center;
+    font-size: 6vh;
+    color: black;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+}
+div.header img{
+    margin-top: 20px;
+    margin-left: 40px;
+    width:50px;
+    height:50px;
+}
+
+ 
+.select{
+    border-radius: 15px;
+    border-color: lightpink;
+
+}
+html,body{
+    height:100%;
+    width:100%;
+    margin: 0;
+    
+}
+div.content{
+    padding-top: 20px;
+    height:100%;
+    
+    
+}
+
+.selects{
+    padding-left: 20px;
+    margin-left: 3vh;
+    margin-top: 8vh;
+}
+hr{
+    
+    border:1px solid;
+    margin-left: -5vh;
+    margin-right: -2vh;
+}
+div.content select{
+    width:100px;
+}
+ 
+a:hover{
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+.col-md-6 p{
+    
+    font-size: 4vh;
+}
+.book img{
+    height:300px;
+    width:200px;
+}
+.knjigepozadina{
+    background:  #ffeedf ; 
+    padding: 0%;
+}
+.footer{
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+    font-size: 2vh;
+    font-style: italic;
+    color: black;
+    background-color: #FFCCCC;
+}
+  
+.bio button{
+    width: 120px;
+height: 38px;
+
+background: #FFCCCC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 1000px;
+border: none;
+margin-bottom: 2vh;
+outline: none;
+}     
+.checked {
+    color: orange;
+  } 
+ 
+  .bigbutton{
+    width: 280px;
+    height: 120px;
+    font-size: 15px;
+    background: #FFCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1000px;
+    border: none;
+    
+    outline: none;  
+  }
+
+  .buttons button{
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    background: #FFCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1000px;
+    border: none;
+    
+    outline: none;  
+  }
+  
+
+
+
+
+  .radio-container {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  .radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    width: 80px;
+  }
+  
+  .radio-container input[type=radio] {
+    display: none;
+  }
+  
+  .radio-container input[type=radio]:checked + label {
+    background: #F7B1AB;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .pets-photo button {
+    border: none;
+    border-radius: 50%;
+    height: 38px;
+    margin-right: 10px;
+    outline: none;
+    width: 38px;
+  }
+  .pets-photo button i {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+  }
+  
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    margin-right: 15px;
+} 
+.nav-item label {
+    cursor: pointer;
+    
+}
+.card-imgtop{
+    width: 200px;
+    height: 100px;
+}
+.horizontal-scrollable > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+  
+.horizontal-scrollable > .row > .card {
+    display: inline-block;
+    float: none;
+} 
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.ppp .active, .dot:hover {
+  background-color: #717171;
+}
+ 
+.slikehrane{
+    width: 300px;
+} 

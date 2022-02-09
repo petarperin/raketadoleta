@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>miabella/recepti</title>
+    <link rel = "icon" href = 
+        "slike/logo.PNG" 
+        type = "image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="skripta.js"></script>
+</head>
+<body onload="inicre()">
+    <div class="container-fluid heder"> 
+        
+        <div class="row" style="background-image: url(slike/crpoz.jpg);height: 600px; background-size: cover; background-repeat: no-repeat;
+        background-attachment: fixed;" >
+            
+            <div class="col" style="padding-top: 20px;">
+                
+                
+                <nav class="navbar navbar-expand navbar-light fixed-top bg-light" style="height: 150px;  ">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"  >
+                            <img src="slike/logo.PNG" alt="Logo" style="width:150px; margin-top: -45px;">
+                            </a>
+                        <div class="d-flex flex-column flex-wrap" id="navbarCollapse">
+                             <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <a class="nav-link py-0" id="navpoc" href="index.html">Pocetna</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0" id="navpro" href="mojprofil.html">Moj profil</a>
+                                </li>
+                                <li class="nav-item active ">
+                                    <a class="nav-link py-0" id="navre" href="recepti.html">Recepti</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0" id="navdod" href="dodajrecept.html">Dodaj recept</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0" id="navo" href="onama.html">O nama</a>
+                                </li>
+                            </ul>
+                            &nbsp;
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item">
+                                    <a class="nav-link py-0 kl" id="glavnoj" href="#">Glavno jelo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0 kl" id="dezertj" href="#">Dezert</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0 kl" id="uzinaj" href="#">Uzina</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link py-0 kl" id="predjeloj" href="#">Predjelo</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <input type='radio' checked value='srp' name='radio' id='radio1'/>
+                                    <label class=" py-0" for='radio1'  value='srp' style="color: grey;">srp</label>
+                                </li>
+                                <li class="nav-item">
+                                    <input type='radio' value='eng' name='radio' id='radio2'/>
+                                    <label class=" py-0" for='radio1'  value='eng'  style="color: grey;">eng</label>
+                                </li>
+                            </ul>
+                             
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </nav>
+
+
+
+                   <div style="text-align: center; padding-top: 20px; color: #d54d7b; font-family: Great Vibes; font-size: 100px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; " id="ree">Recepti</div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="container-fluid " style="padding-top: 20px;background-image: url(slike/prljavobelapozadina.jpg); background-size: cover; background-repeat: no-repeat;
+    background-attachment: fixed;">
+        <div class="row">
+            <div class="col-12" style="text-align: center;">
+                <br><br>
+                <h1><i id="svirec">Svi recepti</i></h1>
+                <br><br>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-12" >
+                <br><br>
+                <select onchange="sort()" required class="select" id="sortType">
+                           
+                    <option value="0"
+                            hidden
+                    >Sort</option>
+                
+                    <!-- normal options -->
+                    <option class="option" value="1" id="naj1">najlakse prvo</option>
+                    <option class="option" value="2" id="naj2">najteze prvo</option>
+                    <option class="option" value="3" id="naj3">ocena rastuce</option>
+                    <option class="option" value="4" id="naj4">ocena opadajuce</option>
+                     
+                  </select>
+                <!-- ovde sort  -->
+                &nbsp;
+                <input type="text" name="" id="pretraga" placeholder="trazi" style="border-radius: 1000px;border: none;">
+                <button id="pretrazi" style="color:black;width: 35px;
+                height: 35px;
+                outline: none;
+                background: #FFCCCC;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 1000px;
+                border: none;">></button>
+                <br><br>
+            </div>
+            
+        </div>
+        <div class="row bio svireceptinormal" style="padding-top: 20px; margin: 10px;">
+            
+            <div class="card-columns deozarecepte" id="prostorrecepti" style="text-align: center; ">
+                 
+            </div>
+             
+        </div>
+        <div class="row bio sortiranirecepti" style="padding-top: 20px;" hidden>
+            <div class="container horizontal-scrollable">
+            <div class="row text-center">
+            <div class="card-columns deozareceptesort" id="prostorreceptisort" style="text-align: center; ">
+                 
+            </div>
+            
+           </div></div>
+        </div>
+
+        <div class="row bio sortiranirecepti" style="padding-top: 20px;">
+            <div class="container horizontal-scrollable">
+            <div class="row text-center">
+            <div class="card-columns deozareceptesort" id="sortirani" style="text-align: center; ">
+            </div>
+            
+           </div></div>
+        </div>
+         
+    </div>
+    <div class="container-fluid futer">
+         
+        <div class="row" style=" background-color: darksalmon;">
+            <div class="col-12 " style="text-align: center;">
+                <span><i id="fut">Copyright 2021, Sara Kolarevic i Aleksa Janjic, Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu</i> </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
